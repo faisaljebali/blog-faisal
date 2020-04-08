@@ -115,6 +115,7 @@ footer {
 }
 .tags-footer {
   text-align: right;
+  margin: 30px 0 20px;
 }
 svg#Capa_1 {
   width: 15px;
@@ -360,6 +361,14 @@ span.tag.tag-symfony{
   background: #7aba20;
   color: #fff;
 }
+span.tag.tag-gatsbyjs{
+  background: #7aba20;
+  color: #fff;
+}
+span.tag.tag-gatsby{
+  background: #7aba20;
+  color: #fff;
+}
 span.tag.tag-graphql{
   background: #e535ab;
   color: #fff;
@@ -396,7 +405,15 @@ span.tag.tag-ui{
   background: #007acc;
   color: #fff;
 }
+span.tag.tag-netlify{
+  background: #007acc;
+  color: #fff;
+}
 span.tag.tag-design{
+  background: #e535ab;
+  color: #fff;
+}
+span.tag.tag-contentful{
   background: #e535ab;
   color: #fff;
 }
