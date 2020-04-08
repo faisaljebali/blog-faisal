@@ -29,6 +29,7 @@ export const postsQuery = graphql`
         title
         id
         tag
+        shortText
         updatedAt
         createdAt
         content {
