@@ -21,6 +21,7 @@ export const query = graphql`
       tag
       createdAt
       id
+      slug
       photo {
         file {
           url
@@ -39,11 +40,19 @@ const PostTemplate = ({ data: { post } }) => {
   })
   let tags = post.tag.split(';');
 
-  let disqusConfig = {
-    url: `${window.location.href}`,
-    identifier: post.id,
-    title: post.title,
-  }
+  if (typeof window !== `undefined`) {
+    let disqusConfig = {
+        url: `${window.location.href}`,
+        identifier: post.id,
+        title: post.title,
+      }
+  }else{
+    let disqusConfig = {
+        url: `https://www.faisaljebali.com/${post.slug}`,
+        identifier: post.id,
+        title: post.title,
+    }
+}
 
   return(<Layout>
     <SEO title={post.title} />
