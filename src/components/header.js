@@ -40,6 +40,11 @@ const Header = (props) => {
         </Link>
         </div>
         <div className="right-header">
+          <div className="nav-header">
+            <Link to="/"  className="link-nav" activeClassName='is-active'>Home</Link> 
+            <Link to="/about"  className="link-nav" activeClassName='is-active'>About</Link>
+            <Link to="/contact"  className="link-nav" activeClassName='is-active'>Contact</Link>
+          </div>
           <a className="btn btn-header" onClick={onChangeTheme}>
           {(theme || defaultTheme) === 'light' ?
           <svg version="1.1" width="24" height="24" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
