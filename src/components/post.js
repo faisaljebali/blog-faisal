@@ -24,7 +24,7 @@ const Post = (props) => {
 
   return(
     <>
-    {(props.post.photo) ? <div className="post-img-item"><Link to={`/${props.post.slug}`}><img src={`${props.post.photo.file.url}?w=386&q=90`} className="responsive" /></Link></div> : '' }
+    {(props.post.photo) ? <div className="post-img-item"><Link to={`/${props.post.slug}`}><img src={`${props.post.photo.file.url}?w=500&q=90`} className="responsive" /></Link></div> : '' }
     <Link to={`/${props.post.slug}`}>
         <div className="post-content">
         <h2>

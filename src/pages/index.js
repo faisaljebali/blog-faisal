@@ -1,14 +1,12 @@
 import React from "react"
 import { graphql,Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Post from "../components/post";
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-163122105-1');
 
-const IndexPage = ({data}) => (
+const IndexPage = ({data}) => {
+  return(
   <Layout>
     <SEO title="Home" />
     <div className="flex-post">
@@ -20,8 +18,8 @@ const IndexPage = ({data}) => (
     ))}
   </div>
 
-  </Layout>
-)
+  </Layout>)
+}
 
 export const postsQuery = graphql`
   query {

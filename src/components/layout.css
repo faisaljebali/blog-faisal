@@ -412,12 +412,31 @@ span.tag.tag-js{
 
 @media only screen and (max-width: 800px) {
   .container {
-    max-width: 100%;
     width: 100%;
-    padding: 0 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
   h1 {
     font-size: 26px;
+  }
+  .post-content h2 {
+    font-size: 21px;
+  }
+  span.tag {
+    padding: 3px 5px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .post-item {
+    width: calc(100% - 14px);
+  }
+  .post-item {
+    max-width: 450px;
+    margin: 10px auto;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -431,5 +450,22 @@ span.tag.tag-js{
   }
   h1 {
     font-size: 23px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .about-flex {
+    flex-direction: column;
+  }
+  .detail-about {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .post-content h2 {
+    font-size: 19px;
+  }
+  h1 {
+    font-size: 21px;
   }
 }
