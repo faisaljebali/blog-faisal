@@ -70,11 +70,48 @@ span.tag {
   color: #fff;
   border-radius: 7px;
 }
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0;
+}
+.btn-header {
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+}
+.post-img {
+  margin-top: 25px;
+  text-align: center;
+}
+.flex-post {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-item {
+  width: calc(50% - 14px);
+  margin: 7px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.tags {
+  display: block;
+  margin-top: 15px;
+  text-align: left;
+}
+.post-content {
+  padding: 12px;
+  padding-bottom: 20px;
+}
 
-
-
-
-
+.post-content h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 23px;
+}
 
 
 
@@ -97,7 +134,18 @@ body.dark-theme {
 .dark-theme code[class*="language-"] {
   color: white;
 }
-
+.dark-theme footer {
+  background: #252627;
+}
+.dark-theme header path {
+  fill: #ffaa2b;
+}
+.dark-theme a {
+  color: #fe5186;
+}
+.dark-theme .post-item {
+  background-color: #252627;
+}
 
 
 
@@ -121,6 +169,15 @@ body.light-theme {
 }
 .light-theme .token.selector,.light-theme .token.attr-name,.light-theme .token.string,.light-theme .token.char,.light-theme .token.builtin {
   color: #97973b;
+}
+.light-theme footer {
+  background: #fafafa;
+}
+.light-theme a {
+  color: #fe5186;
+}
+.light-theme .post-item {
+  background-color: #fafafa;
 }
 
 

@@ -40,11 +40,15 @@ const PostTemplate = ({ data: { post } }) => {
         <h1>{post.title}</h1>
     </div>
     <h5>Published : {moment(post.createdAt).format('Do MMMM YYYY')} | by @faisaljebali </h5>
+
     {tags.map(tag => (
       <span className={`tag tag-${tag}`} key={`tag-${tag}`}>
           #{tag}
       </span>
     ))}
+
+    {(post.photo) ? <div className="post-img"><img src={post.photo.file.url} /></div> : '' }
+
     <div>
       {documentToReactComponents(post.content.json, {
         renderNode: {

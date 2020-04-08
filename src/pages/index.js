@@ -4,19 +4,16 @@ import { graphql,Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Post from "../components/post";
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <div>
-    <h1>Learn With Jason — Recent Episodes</h1>
-    {data.posts.nodes.map(lesson => (
-      <div key={`lesson-${lesson.slug}`}>
-        <h2>
-          <Link to={`/${lesson.slug}`}>
-            {lesson.title}
-          </Link>
-        </h2>
+    <div className="flex-post">
+
+    {data.posts.nodes.map(post => (
+      <div className="post-item" key={`lesson-${post.slug}`}>
+        <Post post={post} />
       </div>
     ))}
   </div>
@@ -34,7 +31,7 @@ export const postsQuery = graphql`
         tag
         updatedAt
         createdAt
-        childContentfulPostContentRichTextNode {
+        content {
           json
         }
         slug
