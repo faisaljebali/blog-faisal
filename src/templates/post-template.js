@@ -52,7 +52,6 @@ const PostTemplate = ({ data: { post } }) => {
 
     return(<Layout>
         <SEO title={post.title} />
-
         <div>
             <h1>{post.title}</h1>
         </div>
@@ -68,7 +67,7 @@ const PostTemplate = ({ data: { post } }) => {
         </div>
         {(post.photo) ? <div className="post-img"><img src={post.photo.file.url} className="responsive" /></div> : '' }
 
-        <div>
+        <div className="post-detail">
         {documentToReactComponents(post.content.json, {
             renderNode: {
             [BLOCKS.HEADING_2]: (_node, children) => (
@@ -79,7 +78,7 @@ const PostTemplate = ({ data: { post } }) => {
             ),
             [BLOCKS.EMBEDDED_ASSET]: node => (
                 <div className="center"><img
-                src={`${node.data.target.fields.file["en-US"].url}?w=300&q=90`}
+                src={`${node.data.target.fields.file["en-US"].url}?w=450&q=90`}
                 alt={node.data.target.fields.title["en-US"]}
                 className="center-img responsive2"
                 /></div>

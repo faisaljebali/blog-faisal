@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     `)
   
     if (result.errors) {
-      reporter.panic("Error loading lessons", JSON.stringify(result.errors))
+      reporter.panic("Error loading post", JSON.stringify(result.errors))
     }
   
     result.data.allContentfulPost.nodes.forEach(post => {
