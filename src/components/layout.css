@@ -69,6 +69,7 @@ span.tag {
   margin-right: 7px;
   color: #fff;
   border-radius: 7px;
+  margin-bottom: 7px;
 }
 footer {
   margin-top: 50px;
@@ -99,9 +100,10 @@ footer {
   justify-content: center;
 }
 .tags {
-  display: block;
+  display: flex;
   margin-top: 15px;
   text-align: left;
+  flex-wrap: wrap;
 }
 .post-content {
   padding: 12px;
@@ -116,6 +118,8 @@ footer {
 .tags-footer {
   text-align: right;
   margin: 30px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 svg#Capa_1 {
   width: 15px;
@@ -214,9 +218,28 @@ a.link-nav {
 .logo-contact svg{
   fill: #fe5186; 
 }
+.tags-item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+svg.arrow-back {
+  width: 15px;
+  margin-right: 6px;
+  fill: #fff;
+}
 
-
-
+a.a-return-home {
+  max-width: 140px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fe5186;
+  padding: 8px;
+  margin: 20px auto;
+  color: #fff;
+  border-radius: 20px;
+}
 
 
 /* Dark */
@@ -273,7 +296,19 @@ body.dark-theme {
 .dark-theme .logo-contact svg:hover {
   fill: #a7a7a7;
 }
-
+.dark-theme a.a-return-home {
+  color: #fff;
+}
+.dark-theme a.a-return-home:hover {
+  color: #252627;
+  background: #efefef;
+}
+.dark-theme svg.arrow-back {
+  fill: #fff;
+}
+.dark-theme a.a-return-home:hover svg {
+  fill: #252627;
+}
 
 
 /* Light */
@@ -329,7 +364,16 @@ body.light-theme {
 .light-theme .logo-contact svg:hover {
   fill: #252627;
 }
-
+.light-theme a.a-return-home {
+  color: #fff;
+}
+.light-theme a.a-return-home:hover {
+  color: #efefef;
+  background: #252627;
+}
+.light-theme svg.arrow-back {
+  fill: #efefef;
+}
 
 
 /* tags */
@@ -430,10 +474,13 @@ span.tag.tag-js{
 @media only screen and (max-width: 800px) {
   .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
     margin-right: auto;
     margin-left: auto;
+  }
+  .menu-header {
+    padding: 12px 15px;
   }
   h1 {
     font-size: 26px;
@@ -484,5 +531,9 @@ span.tag.tag-js{
   }
   h1 {
     font-size: 21px;
+  }
+  .faisal-photo {
+    width: 35px;
+    height: 35px;
   }
 }
