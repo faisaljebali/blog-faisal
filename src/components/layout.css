@@ -243,6 +243,9 @@ a.a-return-home {
 .post-detail{
   word-break: break-word;
 }
+.post-detail p{
+  line-height: 28px;
+}
 
 /* Dark */
 body.dark-theme {
