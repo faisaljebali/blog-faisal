@@ -314,7 +314,13 @@ body.dark-theme {
 .dark-theme a.a-return-home:hover svg {
   fill: #252627;
 }
-
+.dark-theme .scrolltop svg{
+  width: 50px;
+  fill: #fe5186;
+}
+.dark-theme .token.punctuation {
+  color: #1bd6b3;
+}
 
 /* Light */
 body.light-theme {
@@ -378,6 +384,16 @@ body.light-theme {
 }
 .light-theme svg.arrow-back {
   fill: #efefef;
+}
+.light-theme .scrolltop svg{
+    width: 50px;
+    fill: #252627;
+}
+.light-theme .token.punctuation {
+  color: #07c10c;
+}
+.light-theme .token.operator{
+  color: #e400ff;
 }
 
 
