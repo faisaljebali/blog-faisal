@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
 import Prism from "prismjs";
 import * as moment from 'moment';
-import SEO from "../components/seo"
+import SEOPOST from "../components/seopost"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import ReactGA from 'react-ga';
 import BackToTop from "react-back-to-top-button";
@@ -52,7 +52,7 @@ const PostTemplate = ({ data: { post } }) => {
     }
 
     return(<Layout>
-        <SEO title={post.title} />
+        <SEOPOST title={post.title} img={post.photo.file.url} urlpost={`https://www.faisaljebali.com/${post.slug}`} />
         <div>
             <h1>{post.title}</h1>
         </div>
